@@ -1,8 +1,12 @@
+import React from 'react';
 import './App.css';
+import Moon from './Pages/Moon';
 
 function App() {
   return (
-    <div>Hello World</div>
+    <div>Hello World
+     <Moon />
+    </div>
   );
 }
 
