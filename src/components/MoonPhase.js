@@ -1,7 +1,6 @@
 import React from 'react';
 import SunCalc from 'suncalc';
 
-
 export default class MoonPhase extends React.Component {
     getImage(phaseIndex) {
         const imgNum = Math.round(phaseIndex * 23);

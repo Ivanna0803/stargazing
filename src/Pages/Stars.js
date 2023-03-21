@@ -1,7 +1,4 @@
-
-
 import StarCard from "../components/StarCard.js";
-
 
 function Stars(props) {
     // const [imageURL, setImageURL] = useState([]);
@@ -14,14 +11,6 @@ function Stars(props) {
         distance={info.distance_light_year}
         magnitude={info.apparent_magnitude}
         spectra={info.spectral_class} />)
-
-
 }
 
-
-
-
-
-
 export default Stars;
-

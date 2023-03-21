@@ -1,7 +1,7 @@
 
 import List from "./List.js"
 import { useEffect, useState } from "react";
-import Stars from "../Pages/Stars.js";
+import Stars from "../pages/Stars.js";
 import axios from 'axios';
 import StarsInfo from "./StarsInfo.js";
 

@@ -1,11 +1,6 @@
-
 import DropdwonMenu from './DropdwonMenu.js';
 
-
 export default function StarsContainer() {
-    
-
-    
     
     return (<div className="container-fluid" style={{
         backgroundImage: 'url(./stars.jpeg)', backgroundRepeat:'no-repeat', backgroundSize:'cover', minHeight: '100vh'
@@ -15,6 +10,5 @@ export default function StarsContainer() {
         </div>
         <DropdwonMenu />
     </div >
-    )
-    
+    )   
 }
