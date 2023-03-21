@@ -1,0 +1,38 @@
+.home {
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+
+
+
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+.scroll-left p {
+    color: white;
+    width: 60%;
+animation: scroll-left 15s linear infinite;;
+}
+
+@keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
