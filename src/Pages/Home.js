@@ -29,8 +29,10 @@ export default function Home() {
     }
 
     return <div className="home" style={{ backgroundImage: `url(${image})` }}>
-        <div className="floating-text text-center">STARGAZER</div>
-        <div className="scroll-left"><p>DBSBVSvjevjebvjbevbjejjv</p></div>
+        <div class="heading">
+            <h1 className="logo text-center">STARGAZER</h1>
+            <h2 className="scroll-subheader">Let's star a journey across the universe and its infinite beauty</h2>
+        </div>
 
     </div>
 }
