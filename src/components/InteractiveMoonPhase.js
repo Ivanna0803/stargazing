@@ -6,7 +6,7 @@ export default class InteractiveMoonPhase extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        dayOffset: 0,
+      dayOffset: 0,
     };
   }
 
@@ -19,7 +19,8 @@ export default class InteractiveMoonPhase extends Component {
     return (
       <div className="glass-bg rounded p-3">
         <MoonPhase date={newDate} />
-        <input className="col-lg-3"
+        <input
+          className="col-lg-3"
           type="range"
           min="-30"
           max="30"

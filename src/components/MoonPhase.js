@@ -14,42 +14,50 @@ export default class MoonPhase extends React.Component {
     if (index < 0.01) {
       return {
         phase: "New Moon",
-        description: "The Moon's unilluminated side is facing the Earth. The Moon is not visible (except during a solar eclipse).",
+        description:
+          "The Moon's unilluminated side is facing the Earth. The Moon is not visible (except during a solar eclipse).",
       };
     } else if (index < 0.25) {
       return {
         phase: "Waxing Crescent",
-        description: "The Moon appears to be partly but less than one-half illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
+        description:
+          "The Moon appears to be partly but less than one-half illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
       };
     } else if (index < 0.26) {
       return {
         phase: "First Quarter",
-        description: "One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
+        description:
+          "One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
       };
     } else if (index < 0.5) {
       return {
         phase: "Waxing Gibbous",
-        description: "The Moon appears to be more than one-half but not fully illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
+        description:
+          "The Moon appears to be more than one-half but not fully illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
       };
     } else if (index < 0.51) {
       return {
         phase: "Full Moon",
-        description: "The Moon's illuminated side is facing the Earth. The Moon appears to be completely illuminated by direct sunlight.",
+        description:
+          "The Moon's illuminated side is facing the Earth. The Moon appears to be completely illuminated by direct sunlight.",
       };
     } else if (index < 0.75) {
       return {
         phase: "Waning Gibbous",
-        description: "The Moon appears to be more than one-half but not fully illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
+        description:
+          "The Moon appears to be more than one-half but not fully illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
       };
     } else if (index < 0.76) {
       return {
         phase: "Last Quarter",
-        description: " One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
+        description:
+          " One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
       };
     } else {
       return {
         phase: "Waning Crescent",
-        description: "The Moon appears to be partly but less than one-half illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
+        description:
+          "The Moon appears to be partly but less than one-half illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
       };
     }
   }
@@ -65,7 +73,11 @@ export default class MoonPhase extends React.Component {
     if (doNotDisplayInfo) {
       return (
         <div>
-          <img src={this.getImage(phaseIndex)} className="img-card rounded-circle" alt={"Moon phase: " + info["phase"]} />
+          <img
+            src={this.getImage(phaseIndex)}
+            className="img-card rounded-circle"
+            alt={"Moon phase: " + info["phase"]}
+          />
         </div>
       );
     }
@@ -109,4 +121,3 @@ export default class MoonPhase extends React.Component {
     );
   }
 }
-
