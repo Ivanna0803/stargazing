@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavTabs from './NavTabs.js';
-import Home from './pages/Home';
+import Home from './pages/Home.js';
 import Moon from './pages/Moon.js'
 import StarsContainer from './components/StarsContainer';
 
