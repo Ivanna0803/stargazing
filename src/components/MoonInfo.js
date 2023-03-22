@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import MoonPhase from './MoonPhase';
+import "../styles/Moon.css";
 
 export default class MoonInfo extends React.Component {
   constructor(props) {
@@ -22,23 +23,44 @@ export default class MoonInfo extends React.Component {
   render() {
     const astronomyDays = this.state.moonData ? this.state.moonData.weather : [];
     return (
-      <div>
-        <input onChange={e => this.location = e.target.value} />
-        <button onClick={() => this.updateMoonData()}>Moon Info</button>
-        {astronomyDays.map((d, i) => {
-          const city = this.state.moonData.request[0].query;
-          const astronomy = d.astronomy[0];
-          return <div id={"moon-data-" + i} key={i}>
-            <MoonPhase date={d.date} doNotDisplayInfo={true} />
-            <p>City: {city}</p>
-            <p>Date: {d.date}</p>
-            <p>Moon Phase: {astronomy.moon_phase}</p>
-            <p>Moon Illumination: {astronomy.moon_illumination}</p>
-            <p>Moonrise: {astronomy.moonrise}</p>
-            <p>Moonset: {astronomy.moonset}</p>
-          </div>;
-        })}
+      <div className="pb-5">
+        <h3 className="text-center pt-5">Find out more about moon in your city:</h3>
+        <div class="search-group text-center">
+          <input class="search-button rounded" onChange={(e) => (this.location = e.target.value)} />
+          <button class="search-button rounded" onClick={() => this.updateMoonData()}>
+            Search
+          </button>
+        </div>
+        <div class="container-fluid pt-3">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            {astronomyDays.map((d, i) => {
+              const city = this.state.moonData.request[0].query;
+              const astronomy = d.astronomy[0];
+              return (
+                <div class="col text-center">
+                  <div class="card glass-bg bg-dark text-white border-0 rounded-3 shadow-lg moon-card rouded ">
+                    <div class="card-body">
+                      <MoonPhase
+                        date={d.date}
+                        doNotDisplayInfo={true}
+                        style={{ width: "200px", height: "200px" }}
+                      />
+                      <p className="mb-0">{city}</p>
+                      <p className="card-text">{d.date}</p>
+                      <p className="card-phase"><strong>{astronomy.moon_phase}</strong></p>
+                      <p className="mb-0">Moon Illumination: {astronomy.moon_illumination}</p>
+                      <p className="mb-0">Moonrise: {astronomy.moonrise}</p>
+                      <p className="mb-0">Moonset: {astronomy.moonset}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     );
   }
 }
+
+
