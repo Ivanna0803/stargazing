@@ -1,5 +1,5 @@
 .planets {
-    background-image: url('https://www.astronomytrek.com/wp-content/uploads/2013/02/solarsystem-Rogelio-Bernal-Andreo.jpg');
+    background-image: url('./../../public/stars.jpeg');
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
