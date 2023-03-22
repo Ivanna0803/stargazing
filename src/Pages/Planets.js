@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
+import PlanetCard from './../components/PlanetCard.js'
 import axios from "axios";
 const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 
 export default function Planets() {
-    const [results, setresults] = useState([]);
+    const [results, setResults] = useState([]);
     useEffect(() => {
-        planets.map(p => getResults(p))
-    })
-    const getResults = (p) => {
-        axios.get('https://api.api-ninjas.com/v1/planets', {
+        planets.map(p => getResults(p));
+        
+    }, [results])
+    const getResults = async(p) => {
+        console.log(p);
+        await axios.get('https://api.api-ninjas.com/v1/planets', {
             params: {
-                planet: p
+                name: p
 
             },
             headers: {
@@ -19,8 +22,9 @@ export default function Planets() {
         })
             .then(function (response) {
 
-                setresults(response.data[0])
-                
+                setResults(response.data[0])
+                console.log(response.data[0]);
+                return <PlanetCard {...results} />
 
 
             })
@@ -31,4 +35,5 @@ export default function Planets() {
                 // always executed
             });
     }
+     return <PlanetCard {...results} />
 }
