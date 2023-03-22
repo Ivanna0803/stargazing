@@ -12,15 +12,14 @@ export default function DropdwonMenu() {
 
    
     const startSearch = event => {
+        event.preventDefault()
         setSearch(event.target.dataset.constellation);
         
     };
 
-    useEffect(() => {
-        getStarInfo()
-    }, [search]);
+    
 
-    const getStarInfo = () => {
+   function getStarInfo (search) {
         axios.get('https://api.api-ninjas.com/v1/stars', {
             params: {
                 constellation: search
@@ -45,6 +44,9 @@ export default function DropdwonMenu() {
                 // always executed
             });
     }
+    useEffect(() => {
+        getStarInfo(search)
+    }, [search]);
 
     return (<div className="container">
         <div class="row g-3 m-3 align-items-center">
