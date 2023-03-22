@@ -1,0 +1,65 @@
+h3, h1 {
+  text-shadow: 1px 1px 1px black;
+    color: #f1eded;
+}
+
+p {
+  color: rgb(211, 215, 215);
+}
+
+.moon-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.glass-bg {
+    background-color: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(100, 100, 100, 0.2);
+}
+
+  /* .moon-data {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  } */
+  
+/* .moon-data p {
+    margin-bottom: 5px;
+}
+  
+.moon-data p strong {
+    font-weight: bold;
+} */
+
+  .description {
+    text-shadow: 1px 1px 1px black;
+    color: #e1dede;
+    font-size: 18px;
+    text-align: justify;
+  }
+
+.search-button {
+    background-color: #b3b3b3;
+}
+
+.img-card {
+    
+    width: 180px;
+    height: 180px;
+}
+
+.moon-card p {
+  font-size: 0,6em;
+
+}
+
+.card-phase {
+  font-size: 1.5rem;
+}
+ 
+  
