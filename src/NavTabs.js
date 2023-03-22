@@ -15,7 +15,7 @@ function NavTabs() {
                     Home
                 </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
                 <NavLink
                     to="planets"
                     className={({ isActive }) =>
@@ -24,7 +24,7 @@ function NavTabs() {
                 >
                     Planets
                 </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
                 <NavLink
                     to="stars"
