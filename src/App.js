@@ -4,7 +4,6 @@ import NavTabs from './NavTabs.js';
 import Home from './pages/Home.js';
 import Moon from './pages/Moon.js'
 import StarsContainer from './components/StarsContainer';
-import Planets from './pages/Planets';
 import PlanetContainer from './components/PlanetsContainer.js';
 
 export default function App() {
@@ -16,7 +15,7 @@ export default function App() {
         {/* Define routes using the Route component to render different page components at different paths */}
         {/* Define a default route that will render the Home component */}
         <Route path="/" element={<Home />} />
-        <Route path="planets" element={<PlanetContainer />} />
+        {/* <Route path="planets" element={<PlanetContainer />} /> */}
         <Route path="stars" element={<StarsContainer />} />
         <Route path="moon" element={<Moon />} />
         {/* Define a route that will have descendant routes */}
