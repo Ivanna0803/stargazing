@@ -24,10 +24,10 @@ Stargazer was built with a combination of:
 * React
 * BootStrap
 * APIs: 
-⋅⋅* Wordl Weather Online(Astronomy API)
-⋅⋅* NASA Picture of the Day 
-⋅⋅* Stars API 
-⋅⋅* Planets API
+••* Wordl Weather Online(Astronomy API)
+••* NASA Picture of the Day 
+••* Stars API 
+••* Planets API
 * npm: sunlac, axios
 
 ***
