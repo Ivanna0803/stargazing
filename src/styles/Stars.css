@@ -13,8 +13,6 @@
     justify-content: center;
 }
 
-/* .star-card:hover {
-background: rgba(17, 138, 64, 0.5);
-padding: 4px;
-transition: 0.2s;
-} */
+.stars-info {
+    font-size: 26px; 
+}

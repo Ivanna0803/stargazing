@@ -5,13 +5,13 @@ import "../styles/Moon.css";
 export default class MoonPhase extends React.Component {
   getImage(phaseIndex) {
     const imgNum = Math.round(phaseIndex * 23);
+    console.log(imgNum,phaseIndex)
     const imgName = "moon_" + (imgNum < 10 ? "0" : "") + imgNum + ".png";
     return "../../../assets/images/moon_phases/" + imgName;
   }
 
-  getPhaseInfo(phaseIndex) {
-    const index = Math.round((phaseIndex + Number.EPSILON) * 100) / 100;
-    if (index < 0.01) {
+  getPhaseInfo(index) {
+    if (index < 0.03) {
       return {
         phase: "New Moon",
         description:
@@ -23,19 +23,19 @@ export default class MoonPhase extends React.Component {
         description:
           "The Moon appears to be partly but less than one-half illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
       };
-    } else if (index < 0.26) {
+    } else if (index < 0.29) {
       return {
         phase: "First Quarter",
         description:
           "One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
       };
-    } else if (index < 0.5) {
+    } else if (index < 0.54) {
       return {
         phase: "Waxing Gibbous",
         description:
           "The Moon appears to be more than one-half but not fully illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.",
       };
-    } else if (index < 0.51) {
+    } else if (index < 0.58) {
       return {
         phase: "Full Moon",
         description:
@@ -47,7 +47,7 @@ export default class MoonPhase extends React.Component {
         description:
           "The Moon appears to be more than one-half but not fully illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.",
       };
-    } else if (index < 0.76) {
+    } else if (index < 0.83) {
       return {
         phase: "Last Quarter",
         description:

@@ -37,12 +37,18 @@ export default class MoonInfo extends React.Component {
             {astronomyDays.map((d, i) => {
               const city = this.state.moonData.request[0].query;
               const astronomy = d.astronomy[0];
+
+              // Adding current time to the date provided by API response
+              const now = new Date();
+              const dateWithCurrentTime = new Date(d.date);
+              dateWithCurrentTime.setHours(now.getHours(), now.getMinutes(), now.getSeconds());
+
               return (
                 <div class="col text-center">
-                  <div class="card glass-bg bg-dark text-white border-0 rounded-3 shadow-lg moon-card rouded ">
+                  <div class="glass-bg card text-white border-0 rounded-3 shadow-lg moon-card rouded  ">
                     <div class="card-body">
                       <MoonPhase
-                        date={d.date}
+                        date={dateWithCurrentTime}
                         doNotDisplayInfo={true}
                         style={{ width: "200px", height: "200px" }}
                       />

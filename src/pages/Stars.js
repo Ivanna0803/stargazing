@@ -4,7 +4,7 @@ function Stars(props) {
   // const [imageURL, setImageURL] = useState([]);
   let { starInfo } = props;
 
-  return starInfo.slice(0, 10).map((info) => (
+  return starInfo.slice(0, 9).map((info) => (
     <StarCard
       // imageURL={imageURL}
       name={info.name}

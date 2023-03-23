@@ -4,8 +4,8 @@ export default function StarsInfo(props) {
   const { results } = props;
   if (results.length > 0) {
     return (
-      <div className="container text-white mt-3" style={{ fontSize: "1.2rem" }}>
-        <ul style={{ listStyle: "none" }}>
+      <div className="container text-white mt-3 glass-bg p-4 stars-info" style={{ fontSize: "1.2rem" }}>
+        <ul style={{ listStyle: "none" }} className="stars-info">
           <li>
             - The distance from the Earth is measured in{" "}
             <span className="bold-text">light years</span> . A light year equals to 5.88 trillion
