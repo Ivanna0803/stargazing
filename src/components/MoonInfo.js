@@ -45,7 +45,7 @@ export default class MoonInfo extends React.Component {
 
               return (
                 <div class="col text-center">
-                  <div class="glass-bg card text-white border-0 rounded-3 shadow-lg moon-card rouded  ">
+                  <div class="glass-bg card text-white border-0 rounded-3 shadow-lg moon-card rouded">
                     <div class="card-body">
                       <MoonPhase
                         date={dateWithCurrentTime}

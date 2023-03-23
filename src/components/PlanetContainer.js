@@ -30,70 +30,78 @@ export default function PlanetContainer() {
       .finally(function () {});
   }
 
-  // function getCard() {
-  //     console.log('executed');
-  //     console.log(currentPlanet);
-  // }
-
   return (
+    <div
+    className="container-fluid"
+    style={{
+      backgroundImage: "url(./stars.jpeg)",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      minHeight: "100vh",
+    }}>
     <div className="container text-white pt-3">
-      <h4>
+      <h2 className="text-center pb-2 planet-text">
         The solar system comprises 8 planets, approximately 170 natural planetary satellites
         (moons), and countless asteroids, meteorites, and comets.
+      </h2>
+      <h4 className="container rounded glass-bg p-4 planet-text">
+        There are eight planets in the solar system. The four inner terrestrial planets are Mercury, 
+        Venus, Earth, and Mars, all of which consist mainly of rock. The four outer planets are Jupiter, 
+        Saturn, Neptune, and Uranus, giant planets that consist mainly of either gases or ice. Pluto was 
+        considered the ninth planet until 2006, when the International Astronomical Union voted to 
+        classify Pluto as a dwarf planet instead.
       </h4>
-      <h5>
-        There are eight planets in the solar system. The four inner terrestrial planets are{" "}
-        <span  
+      <div className="container text-center">
+      <span  
           onClick={(e) => {
             setCurrentPlanet(e.target.innerText);
           }}
-          class="planet">
+          class="planet" >
           Mercury
         </span>
-        ,{" "}
+
         <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
           Venus
         </span>
-        ,{" "}
+    
         <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
           Earth
         </span>
-        , and{" "}
+      
         <span class="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Mars
         </span>
-        , all of which consist mainly of rock. The four outer planets are{" "}
+        
         <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
           Jupiter
         </span>
-        ,{" "}
+      
         <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
           Saturn
         </span>
-        ,{" "}
+      
         <span class="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Neptune
         </span>
-        , and{" "}
+    
         <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
           Uranus
         </span>
-        , giant planets that consist mainly of either gases or ice. Pluto was considered the ninth
-        planet until 2006, when the International Astronomical Union voted to classify Pluto as a
-        dwarf planet instead.
-      </h5>
+      </div>
       <hr />
-      <h5>Click on one of the planets above to see some stats for each one of them.</h5>
 
       <div class="row">
         <PlanetCard {...results} />
         <StatsInfo />
       </div>
-      <h5>
+      <div className="pb-4">
+      <h5 className="container rounded glass-bg p-4 planet-text">
         The solar system is situated within the Orion-Cygnus Arm of the Milky Way Galaxy. Alpha
         Centauri, made up of the stars Proxima Centauri, Alpha Centauri A, and Alpha Centauri B, is
         the closest star system to the solar system.
       </h5>
+      </div>
+    </div>
     </div>
   );
 }

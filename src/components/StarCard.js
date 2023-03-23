@@ -7,7 +7,7 @@ function StarCard(props) {
   return (
     <>
       <div
-        class="card star-card m-2"
+        class="card star-card m-2" 
         style={{ width: "18rem", background: "rgba(255, 215, 0, 0.8)", fontSize: "1.4rem" }}>
         <ul class="list-group list-group-flush m-2 text-white">
           <li class="list-group-item m-2">Name: {name}</li>

@@ -1,6 +1,5 @@
 import { React } from "react";
 
-
 export default function PlanetCard(props) {
   const { name, mass, temperature, period } = props;
 
