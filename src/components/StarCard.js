@@ -1,5 +1,5 @@
 import { React } from "react";
-import "./../styles/StarCard.css";
+import "../styles/Stars.css";
 
 function StarCard(props) {
   const { name, distance, magnitude, spectra } = props;

@@ -40,15 +40,15 @@ export default function DropdwonMenu() {
   }, [search]);
 
   return (
-    <div className="container">
+    <div className="container text-center">
       <div class="row g-3 m-3 align-items-center">
         <div class="col-auto">
           <label for="inputPassword6" class="col-form-label text-white fs-2"></label>
         </div>
         <div class="col-auto">
-          <div class="dropdown">
+          <div class="dropdown ">
             <button
-              class="btn btn-secondary dropdown-toggle btn-lg"
+              class="btn btn-secondary dropdown-toggle btn-lg search-bar"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false">

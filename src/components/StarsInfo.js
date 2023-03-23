@@ -1,4 +1,4 @@
-import "./../styles/StarsInfo.css";
+import "../styles/Stars.css";
 
 export default function StarsInfo(props) {
   const { results } = props;
