@@ -44,9 +44,9 @@ export default class MoonInfo extends React.Component {
               dateWithCurrentTime.setHours(now.getHours(), now.getMinutes(), now.getSeconds());
 
               return (
-                <div class="col text-center">
-                  <div class="glass-bg card text-white border-0 rounded-3 shadow-lg moon-card rouded">
-                    <div class="card-body">
+                <div className="col text-center">
+                  <div className="glass-bg card text-white border-0 rounded-3 shadow-lg moon-card rouded">
+                    <div className="card-body">
                       <MoonPhase
                         date={dateWithCurrentTime}
                         doNotDisplayInfo={true}
