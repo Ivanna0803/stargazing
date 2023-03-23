@@ -31,8 +31,8 @@ export default function Home() {
     <div className="home" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}>
       <div class="heading">
         <h1 className="logo logo-name text-center">STARGAZER</h1>
-        <hr />
-        <h3 className="scroll-subheader text-center">
+        <hr className="mb-2"/>
+        <h3 className="scroll-subheader text-center promo">
           Let's start a journey across the universe and its infinite beauty
         </h3>
       </div>
@@ -41,3 +41,4 @@ export default function Home() {
     
   );
 }
+

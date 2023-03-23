@@ -40,13 +40,10 @@ export default function PlanetContainer() {
       backgroundSize: "cover",
       minHeight: "100vh",
     }}>
-    <div className="container text-white pt-3">
-      <h2 className="text-center pb-2 planet-text">
-        The solar system comprises 8 planets, approximately 170 natural planetary satellites
-        (moons), and countless asteroids, meteorites, and comets.
-      </h2>
+    <div className="container text-white">
+      <h1 className="text-center p-4">Planets of Solar system</h1>
       <h4 className="container rounded glass-bg p-4 planet-text">
-        There are eight planets in the solar system. The four inner terrestrial planets are Mercury, 
+        There are 8 planets in the solar system. The four inner terrestrial planets are Mercury, 
         Venus, Earth, and Mars, all of which consist mainly of rock. The four outer planets are Jupiter, 
         Saturn, Neptune, and Uranus, giant planets that consist mainly of either gases or ice. Pluto was 
         considered the ninth planet until 2006, when the International Astronomical Union voted to 
@@ -89,7 +86,7 @@ export default function PlanetContainer() {
           Uranus
         </span>
       </div>
-      <hr />
+      <hr className="mt-1"/>
 
       <div class="row">
         <PlanetCard {...results} />

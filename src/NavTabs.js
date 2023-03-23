@@ -5,8 +5,8 @@ import "./styles/Home.css";
 function NavTabs() {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <ul className="nav nav-tabs">
-      <li className="nav-item bar">
+    <ul className="nav nav-tabs ">
+      <li className="nav-item bar ">
         <NavLink
           to="/"
           end

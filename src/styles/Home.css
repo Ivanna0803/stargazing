@@ -3,27 +3,21 @@ min-height: 100vh;
 }
 
 .heading {
-    color: white;
+    color: rgb(232, 222, 222);
     position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 }
-    
-.item-nav {
-    color: rgb(21, 56, 56);
-  }
-  
+      
 .nav-link {
-    color: rgb(244, 232, 232) !important;
+    color: rgb(232, 222, 222) !important;
+    
 }
 
 .active {
     color: rgb(41, 39, 39) !important;
-}
-
-.bar {
-    color: aquamarine !important;
+    
 }
 
 .logo-name {
@@ -34,7 +28,13 @@ min-height: 100vh;
 
 .logo-name:hover  {
     transform: scale(1.5);   
-    color:  yellow;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    color:  rgb(237, 237, 227);
+    filter: drop-shadow(3px 5px 2px rgba(218, 207, 207, 0.4));
 }
+
+.promo {
+    font-size: 20px;
+}
+
+
 
