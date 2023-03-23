@@ -36,6 +36,18 @@ Stargazer was built with a combination of:
 
 ## App in action (images)
 
+### Home Page
+
+Home Page background is the NASA Picture of the day, which will be changed every day, based on the new picture of the day.
+![Home Page](./public/assets/images/readme/home_page.png)
+
+### Planets Page
+![Planets Page](./public/assets/images/readme/planet_page.png)
+
+### Moon Page 
+![Moon Page](./public/assets/images/readme/moon_page.png)
+
+
 ***
 
 ## Installation
