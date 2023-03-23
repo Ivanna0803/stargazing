@@ -3,6 +3,7 @@ import axios from "axios";
 import "./../styles/Planets.css";
 import PlanetCard from "./PlanetCard";
 import StatsInfo from "./StatsInfo";
+
 export default function PlanetContainer() {
   const [currentPlanet, setCurrentPlanet] = useState("Earth");
   const [results, setResults] = useState([]);

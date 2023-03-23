@@ -24,3 +24,10 @@ span:hover  {
     color:  yellow;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
+.planet-info {
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    color: #e1dede;
+    line-height: 1.3;
+}
