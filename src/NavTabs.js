@@ -6,15 +6,15 @@ function NavTabs() {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <ul className="nav nav-tabs">
-      <li className="nav-item">
+      <li className="nav-item bar">
         <NavLink
           to="/"
           end
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}  style={{color: "yellow"}}>
+          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           Home
         </NavLink>
       </li>
-      {/* <li className="nav-item">
+      <li className="nav-item">
                 <NavLink
                     to="planets"
                     className={({ isActive }) =>
@@ -23,15 +23,15 @@ function NavTabs() {
                 >
                     Planets
                 </NavLink>
-            </li> */}
-      <li className="nav-item">
+            </li>
+      <li className="nav-item bar">
         <NavLink
           to="stars"
           className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           Stars
         </NavLink>
       </li>
-      <li className="nav-item">
+      <li className="nav-item  bar">
         <NavLink
           to="moon"
           end

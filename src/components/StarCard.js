@@ -8,7 +8,7 @@ function StarCard(props) {
     <>
       <div
         class="card star-card m-2"
-        style={{ width: "18rem", background: "rgba(0, 233, 89, .5)", fontSize: "1.4rem" }}>
+        style={{ width: "18rem", background: "rgba(255, 215, 0, 0.8)", fontSize: "1.4rem" }}>
         <ul class="list-group list-group-flush m-2 text-white">
           <li class="list-group-item m-2">Name: {name}</li>
           <li class="list-group-item m-2">Distance in light years: {distance}</li>
