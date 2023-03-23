@@ -7,7 +7,7 @@
 }
 
 .planet  {
-    color: rgb(209, 209, 69);
+    color: rgb(216, 216, 53);
     cursor: pointer;
     font-size: 25px;
     padding: 2%;
@@ -16,6 +16,7 @@
 
 span {
     transition: all 0.5s linear;
+    font-weight: bold;
 }
 
 span:hover  {

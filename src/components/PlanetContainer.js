@@ -84,7 +84,7 @@ export default function PlanetContainer() {
           Neptune
         </span>
     
-        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
+        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet bold">
           Uranus
         </span>
       </div>
