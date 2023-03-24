@@ -30,7 +30,7 @@ export default function Home() {
   
     <div className="home" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}>
       <div className="heading">
-        <h1 className="logo logo-name text-center">STARGAZER</h1>
+        <h1 className="logo logo-name text-center">BEYOND EARTH</h1>
         <hr className="mb-2"/>
         <h3 className="scroll-subheader text-center promo">
           Let's start a journey across the universe and its infinite beauty
