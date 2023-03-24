@@ -54,7 +54,7 @@ Home Page background is the NASA Picture of the day, which will be changed every
 As this is all able to run inside the browser you won't need to install anything to run this app.
 To deploy, simply follow the URL and begin searching. 
 
-### Deploy using this link: https://stargazer-explorer.netlify.app/
+### Deploy using this link: https://beyond-earth-space-explorer.netlify.app/
 
 ***
 
