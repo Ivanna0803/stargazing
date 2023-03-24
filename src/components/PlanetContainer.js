@@ -13,22 +13,22 @@ export default function PlanetContainer() {
   }, [currentPlanet]);
 
   function getResults() {
-    axios
-      .get("https://api.api-ninjas.com/v1/planets", {
-        params: {
-          name: currentPlanet,
-        },
-        headers: {
-          "X-Api-Key": "NLaSta8xwFUGYDylwCBfoQ==POBmWJqcJZoqBnOE",
-        },
-      })
-      .then(function (response) {
-        setResults(response.data[0]);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-      .finally(function () {});
+    const planetData = localStorage.getItem(currentPlanet)
+    if (planetData) {
+      return setResults(JSON.parse(planetData));
+    }
+    axios.get("https://api.api-ninjas.com/v1/planets", {
+      params: {name: currentPlanet},
+      headers: {"X-Api-Key": "NLaSta8xwFUGYDylwCBfoQ==POBmWJqcJZoqBnOE"},
+    })
+    .then(function (response) {
+      localStorage.setItem(currentPlanet, JSON.stringify(response.data[0]));
+      setResults(response.data[0]);
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+    .finally(function () {});
   }
 
   return (
@@ -50,45 +50,41 @@ export default function PlanetContainer() {
         classify Pluto as a dwarf planet instead.
       </h4>
       <div className="container text-center">
-      <span  
-          onClick={(e) => {
-            setCurrentPlanet(e.target.innerText);
-          }}
-          class="planet" >
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Mercury
         </span>
 
-        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Venus
         </span>
     
-        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Earth
         </span>
       
-        <span class="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Mars
         </span>
         
-        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Jupiter
         </span>
       
-        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet">
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Saturn
         </span>
       
-        <span class="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Neptune
         </span>
     
-        <span onClick={(e) => setCurrentPlanet(e.target.innerText)} class="planet bold">
+        <span className="planet" onClick={(e) => setCurrentPlanet(e.target.innerText)}>
           Uranus
         </span>
       </div>
       <hr className="mt-1"/>
 
-      <div class="row">
+      <div className="row">
         <PlanetCard {...results} />
         <StatsInfo />
       </div>

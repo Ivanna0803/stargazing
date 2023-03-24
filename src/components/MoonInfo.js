@@ -26,14 +26,14 @@ export default class MoonInfo extends React.Component {
     return (
       <div className="pb-5">
         <h3 className="text-center pt-5">Find out more about moon in your city:</h3>
-        <div class="search-group text-center">
-          <input class="search-button rounded" onChange={(e) => (this.location = e.target.value)} />
-          <button class="search-button rounded" onClick={() => this.updateMoonData()}>
+        <div className="search-group text-center">
+          <input className="search-button rounded" onChange={(e) => (this.location = e.target.value)} />
+          <button className="search-button rounded" onClick={() => this.updateMoonData()}>
             Search
           </button>
         </div>
-        <div class="container-fluid pt-3">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div className="container-fluid pt-3">
+          <div className="row row-cols-1 row-cols-md-3 g-4">
             {astronomyDays.map((d, i) => {
               const city = this.state.moonData.request[0].query;
               const astronomy = d.astronomy[0];

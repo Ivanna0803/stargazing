@@ -29,7 +29,7 @@ export default function Home() {
   return (
   
     <div className="home" style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}>
-      <div class="heading">
+      <div className="heading">
         <h1 className="logo logo-name text-center">STARGAZER</h1>
         <hr className="mb-2"/>
         <h3 className="scroll-subheader text-center promo">

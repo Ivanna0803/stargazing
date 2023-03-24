@@ -14,6 +14,12 @@ export default function DropdwonMenu() {
   };
 
   function getStarInfo(search) {
+    const constellationData = localStorage.getItem(search);
+    if (constellationData) {
+      // If constallationData already exists in local storage then using it instad of calling API
+      return setStarInfo(JSON.parse(constellationData));
+    }
+
     axios
       .get("https://api.api-ninjas.com/v1/stars", {
         params: {
@@ -24,9 +30,9 @@ export default function DropdwonMenu() {
         },
       })
       .then(function (response) {
+        // When we get successful response we store in in local storage for caching
+        localStorage.setItem(search, JSON.stringify(response.data));
         setStarInfo(response.data);
-        console.log(response.data);
-        console.log(search);
       })
       .catch(function (error) {
         console.log(error);
@@ -41,20 +47,20 @@ export default function DropdwonMenu() {
 
   return (
     <div className="container text-center">
-      <div class="row g-3 m-3 align-items-center">
-        <div class="col-auto">
-          <label for="inputPassword6" class="col-form-label text-white fs-2"></label>
+      <div className="row g-3 m-3 align-items-center">
+        <div className="col-auto">
+          <label for="inputPassword6" className="col-form-label text-white fs-2"></label>
         </div>
-        <div class="col-auto">
-          <div class="dropdown ">
+        <div className="col-auto">
+          <div className="dropdown">
             <button
-              class="btn btn-secondary dropdown-toggle btn-lg search-bar"
+              className="btn btn-secondary dropdown-toggle btn-lg search-bar"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false">
               Select a constellation to start
             </button>
-            <ul class="dropdown-menu" style={{ maxHeight: "18em", "overflow-y": "auto" }}>
+            <ul className="dropdown-menu" style={{ maxHeight: "18em", "overflow-y": "auto" }}>
               <List startSearch={startSearch} />
             </ul>
           </div>

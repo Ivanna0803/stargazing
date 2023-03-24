@@ -16,3 +16,7 @@
 .stars-info {
     font-size: 26px; 
 }
+
+.inline {
+    display: inline !important;
+}
