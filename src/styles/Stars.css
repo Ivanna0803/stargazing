@@ -1,3 +1,7 @@
+ h1 {
+    text-shadow: 1px 1px 1px black;
+    color: rgb(211, 215, 215);
+ }
  .star-description{
     justify-content: center;
     text-shadow: 1px 1px 1px black;
@@ -12,9 +16,14 @@
 .search-bar {
     justify-content: center;
 }
-
+.star-card {
+    text-shadow: 1px 1px 1px black;
+    color: #e1dede;
+}
 .stars-info {
     font-size: 26px; 
+    text-shadow: 1px 1px 1px black;
+    color: rgb(211, 215, 215);
 }
 
 .inline {

@@ -8,7 +8,7 @@ export default function MoonContainer() {
          backgroundImage: 'url(./stars.jpeg)', backgroundRepeat:'repeat', backgroundSize:'cover', minHeight: '100vh'
     }}>
         <div className="container">
-            <h1 className="text-white text-align-center text-center p-4">Moon Phases</h1>
+            <h1 className="text-align-center text-center p-4">Moon Phases</h1>
             <InteractiveMoonPhase />
             <MoonInfo />
         </div>

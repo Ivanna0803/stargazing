@@ -46,7 +46,7 @@ export default function DropdwonMenu() {
   }, [search]);
 
   return (
-    <div className="container text-center">
+    <div className="container ">
       <div className="row g-3 m-3 align-items-center">
         <div className="col-auto">
           <label for="inputPassword6" className="col-form-label text-white fs-2"></label>

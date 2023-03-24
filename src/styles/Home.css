@@ -26,11 +26,12 @@ min-height: 100vh;
     
 }
 
-.logo-name:hover  {
+.logo-name:hover,
+.logo-name:active  {
     transform: scale(1.5);   
     color:  rgb(237, 237, 227);
     filter: drop-shadow(3px 5px 2px rgba(218, 207, 207, 0.4));
-}
+} 
 
 .promo {
     font-size: 27px;
